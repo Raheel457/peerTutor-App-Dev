@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "57999496581",
+    "project_id": "peertutor-c18b6",
+    "storage_bucket": "peertutor-c18b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57999496581:android:477bfa41510d0c9e8960ec",
+        "android_client_info": {
+          "package_name": "com.example.peertutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57999496581-eg0790v826blha9gegfd92cntcmumv6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJmldU3oePPIo0fkD1oeF06Nzdo7F98io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57999496581-eg0790v826blha9gegfd92cntcmumv6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
