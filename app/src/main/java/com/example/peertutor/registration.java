@@ -140,7 +140,7 @@ public class registration extends AppCompatActivity {
                     return;
                 }
                 else if (TextUtils.isEmpty(String.valueOf(semester))){
-                    Toast.makeText(registration.this, "Enter you semester",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(registration.this, "Enter your semester",Toast.LENGTH_SHORT).show();
                     return;
                 }
 

@@ -12,6 +12,12 @@
         android:theme="@style/Theme.PeerTutor"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePass"
+            android:exported="false" />
+        <activity
+            android:name=".show_profile"
+            android:exported="false" />
+        <activity
             android:name=".make_question"
             android:exported="false" />
         <activity

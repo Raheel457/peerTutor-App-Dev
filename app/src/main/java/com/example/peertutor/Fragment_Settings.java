@@ -8,11 +8,13 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +37,7 @@ public class Fragment_Settings extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     Button logout;
+    LinearLayout layout,changePass;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     View parentholder;
@@ -89,6 +92,9 @@ public class Fragment_Settings extends Fragment {
 
         parentholder =inflater.inflate(R.layout.fragment__settings,null);
 
+        layout = (LinearLayout)  parentholder.findViewById(R.id.toMyProfile);
+        changePass = (LinearLayout)  parentholder.findViewById(R.id.toChangePass);
+
         db = FirebaseDatabase.getInstance();
         userReference = db.getReference("user");
         userName = (TextView) parentholder.findViewById(R.id.setting_user);
@@ -108,6 +114,20 @@ public class Fragment_Settings extends Fragment {
                         userName.setText(String.valueOf(dataSnapshot.child("name").getValue()));
                     }
                 }
+            }
+        });
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(getActivity(), show_profile.class);
+                startActivity(intent);
+            }
+        });
+        changePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChangePass.class);
+                startActivity(intent);
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {
